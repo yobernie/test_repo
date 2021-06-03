@@ -78,7 +78,7 @@ git push -u origin master
 git status
 
 
-
+git commit -a -m "Mensage de commit"
 
 
 
