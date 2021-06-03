@@ -1,0 +1,94 @@
+sudo apt update
+sudo apt install git
+
+#VERIFICAIONDO LA VERSION DE GIT
+!git --version
+
+ret:
+git version 2.27.0
+
+
+# SETEO DE CONFIGURACION DE USUARIO GLOBAL. EN CASO DE QUERER USAR UN USUARIO PARA UN PROYECTO ESPESIFICO A DONDE DICE "global" PONER
+# PONER EL NOMBRE DEL PROYECTO
+
+git config --global user.name "yobernie"
+git config --global user.email "yobernie@gmail.com"
+
+
+
+# LISTADO DEL SETEO DE LA CONFIGURACION
+
+!git config --list
+ret:
+user.name=HMA.81
+user.email=yobernie@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+
+
+
+# OBTENER UN VALOR ESPECIFICO DE LA CONFIGURACION
+
+!git config user.name
+
+
+# MANUAL GIT DE COMANDOS COMPLETO
+!man git
+
+
+
+# MANUAL DE COMANDOS COMUNES
+!git help
+
+
+
+
+# INICIALIZAR REPOSITORIO
+# 1 CD A LA CARPETA
+# git init
+import os
+os.chdir('/home/hernan/notebooks/GIT Practica/proyecto_test')
+git init
+
+ret:
+Reinitialized existing Git repository in /mnt/c/Users/yober/Documents/notebooks/GIT Practica/proyecto_test/.git/
+
+
+
+
+
+
+#generacion de un archivo textp plano
+
+echo "# test_repo" >> README.md
+
+
+
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/yobernie/test_repo.git
+git push -u origin master
+
+
+
+----
+git status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
